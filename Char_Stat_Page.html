@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html>
+ <head>
+   <script src="http://code.jquery.com/jquery-latest.min.js"
+        type="text/javascript"></script>
+   <link rel="stylesheet" type="text/css" href="Char_Stat_Page.css"/>
+   <title>Ogygia: Heroes</title>
+ </head>
+  <body>
+    <div class="content-block">
+    </div>
+    <nav class="topbar">
+      <div class="logo">
+        <a>
+          <img src="Assets/Logo.png" style="width: 170px"/>
+        </a>
+      </div>
+      <div class="home">
+        <a>
+          <p class="menu">Home</p>
+          <p class="menu">Events</p>
+          <p class="menu">Heroes</p>
+          <p class="menu">Gallery</p>
+        </a>
+      </div>
+
+    </nav>
+
+    <div class="container">
+      <p class="headers">Heroes of Ogygia</p>
+    </div>
+<!--Row 1 Heroes-->
+
+    <div class="container">
+
+      <div class="columns">
+        <a onclick="openModalKnight()">
+        <img src="Assets/knightface1.png" class="imgProfilePic"/>
+        </a>
+        <p class="names">Knight</p>
+      </div>
+
+      <div class="columns">
+        <a onclick="openModalMage()">
+        <img src="Assets/mageFace.png" class="imgProfilePic"/>
+        </a>
+        <p class="names">Mage</p>
+      </div>
+
+    </div>
+<!--Row 2 Heroes-->
+    <div class="container">
+      <div class="columns">
+        <a onclick="openModalAssassin()">
+        <img src="Assets/Assassinface.png" class="imgProfilePic"/>
+        </a>
+        <p class="names">Assassin</p>
+      </div>
+
+      <div class="columns">
+        <a onclick="openModalHealer()">
+        <img src="Assets/healerFace.png" class="imgProfilePic"/>
+        </a>
+        <p class="names">Healer</p>
+      </div>
+    </div>
+
+<!-- Knight content -->
+    <div id="Knight" class="modal">
+  <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" onclick="closeModalKnight()">&times;</span>
+        <img src="Assets/knightbody.png" class="charImages"/>
+        <div class="statColumn">
+          <div class="statRows">
+            <h1 class="statTitle">Knight</h1>
+            <br>
+
+            <p class="statValFonts">Level</p>
+            <input type="text" id="KnightText" value="1" style="text-align: center;">
+            <br>
+            <button style="text-align: center;" onclick="statsKnight()">Check Stats</button>
+
+
+          </div>
+          <div class="statRows">
+            <div class="statParts">
+              <h3 class="statFonts">ATK</h3><h4 id="knightAtk" class="statValFonts">260</h4>
+
+              <h3 class="statFonts">MATK</h3><h4 id="knightMatk" class="statValFonts">40</h4>
+
+              <h3 class="statFonts">DEF</h3><h4 id="knightDef" class="statValFonts">250</h4>
+
+              <h3 class="statFonts">MDEF</h3><h4 id="knightMdef" class="statValFonts">90</h4>
+
+              <h3 class="statFonts">HP</h3><h4 id="knightHp" class="statValFonts">240</h4>
+
+              <h3 class="statFonts">MANA</h3><h4 id="knightMana" class="statValFonts">45</h4>
+              <p id="stats"></p>
+            </div>
+            <div class="statParts">
+              <h3 class="statFonts">STR</h3><h4 id="knightStr" class="statValFonts">280</h4>
+
+              <h3 class="statFonts">AGI</h3><h4 id="knightAgi" class="statValFonts">35</h4>
+
+              <h3 class="statFonts">INT</h3><h4 id="knightInt" class="statValFonts">72</h4>
+
+              <h3 class="statFonts">CRIT</h3><h4 id="knightCrit" class="statValFonts">168</h4>
+
+              <h3 class="statFonts">PRCS</h3><h4 id="knightPrcs" class="statValFonts">108</h4>
+
+              <h3 class="statFonts">RES</h3><h4 id="knightRes" class="statValFonts">230</h4>
+              <p id="stats"></p>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- Mage content -->
+    <div id="Mage" class="modal">
+  <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" onclick="closeModalMage()">&times;</span>
+        <img src="Assets/mage3.png" class="charImages"/>
+        <div class="statColumn">
+          <div class="statRows">
+            <h1 class="statTitle">Mage</h1>
+            <br>
+
+            <p class="statValFonts">Level</p>
+            <input type="text" id="MageText" value="1" style="text-align: center;">
+            <br>
+            <button style="text-align: center;" onclick="statsMage()">Check Stats</button>
+
+
+          </div>
+          <div class="statRows">
+            <div class="statParts">
+              <h3 class="statFonts">ATK</h3><h4 id="mageAtk" class="statValFonts">32</h4>
+
+              <h3 class="statFonts">MATK</h3><h4 id="mageMatk" class="statValFonts">280</h4>
+
+              <h3 class="statFonts">DEF</h3><h4 id="mageDef" class="statValFonts">30</h4>
+
+              <h3 class="statFonts">MDEF</h3><h4 id="mageMdef" class="statValFonts">162</h4>
+
+              <h3 class="statFonts">HP</h3><h4 id="mageHp" class="statValFonts">102</h4>
+
+              <h3 class="statFonts">MANA</h3><h4 id="mageMana" class="statValFonts">230</h4>
+              <p id="stats"></p>
+            </div>
+            <div class="statParts">
+              <h3 class="statFonts">STR</h3><h4 id="mageStr" class="statValFonts">60</h4>
+
+              <h3 class="statFonts">AGI</h3><h4 id="mageAgi" class="statValFonts">91</h4>
+
+              <h3 class="statFonts">INT</h3><h4 id="mageInt" class="statValFonts">260</h4>
+
+              <h3 class="statFonts">CRIT</h3><h4 id="mageCrit" class="statValFonts">126</h4>
+
+              <h3 class="statFonts">PRCS</h3><h4 id="magePrcs" class="statValFonts">113</h4>
+
+              <h3 class="statFonts">RES</h3><h4 id="mageRes" class="statValFonts">128</h4>
+              <p id="stats"></p>
+            </div>
+
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+<!-- Assassin content -->
+    <div id="Assassin" class="modal">
+  <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" onclick="closeModalAssassin()">&times;</span>
+        <img src="Assets/Assassin3.png" class="charImages"/>
+        <div class="statColumn">
+          <div class="statRows">
+            <h1 class="statTitle">Assassin</h1>
+            <br>
+
+            <p class="statValFonts">Level</p>
+            <input type="text" id="AssassinText" value="1" style="text-align: center;">
+            <br>
+            <button style="text-align: center;" onclick="statsAssassin()">Check Stats</button>
+
+
+          </div>
+          <div class="statRows">
+            <div class="statParts">
+              <h3 class="statFonts">ATK</h3><h4 id="assassinAtk" class="statValFonts">191</h4>
+
+              <h3 class="statFonts">MATK</h3><h4 id="assassinMatk" class="statValFonts">154</h4>
+
+              <h3 class="statFonts">DEF</h3><h4 id="assassinDef" class="statValFonts">107</h4>
+
+              <h3 class="statFonts">MDEF</h3><h4 id="assassinMdef" class="statValFonts">113</h4>
+
+              <h3 class="statFonts">HP</h3><h4 id="assassinHp" class="statValFonts">136</h4>
+
+              <h3 class="statFonts">MANA</h3><h4 id="assassinMana" class="statValFonts">152</h4>
+              <p id="stats"></p>
+            </div>
+            <div class="statParts">
+              <h3 class="statFonts">STR</h3><h4 id="assassinStr" class="statValFonts">140</h4>
+
+              <h3 class="statFonts">AGI</h3><h4 id="assassinAgi" class="statValFonts">240</h4>
+
+              <h3 class="statFonts">INT</h3><h4 id="assassinInt" class="statValFonts">124</h4>
+
+              <h3 class="statFonts">CRIT</h3><h4 id="assassinCrit" class="statValFonts">290</h4>
+
+              <h3 class="statFonts">PRCS</h3><h4 id="assassinPrcs" class="statValFonts">230</h4>
+
+              <h3 class="statFonts">RES</h3><h4 id="assassinRes" class="statValFonts">150</h4>
+              <p id="stats"></p>
+            </div>
+
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+<!-- Healer content -->
+    <div id="Healer" class="modal">
+  <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" onclick="closeModalHealer()">&times;</span>
+        <img src="Assets/healerbody.png" class="charImages"/>
+        <div class="statColumn">
+          <div class="statRows">
+            <h1 class="statTitle">Healer</h1>
+            <br>
+
+            <p class="statValFonts">Level</p>
+            <input type="text" id="HealerText" value="1" style="text-align: center;">
+            <br>
+            <button style="text-align: center;" onclick="statsHealer()">Check Stats</button>
+
+
+          </div>
+          <div class="statRows">
+            <div class="statParts">
+              <h3 class="statFonts">ATK</h3><h4 id="healerAtk" class="statValFonts">12</h4>
+
+              <h3 class="statFonts">MATK</h3><h4 id="healerMatk" class="statValFonts">84</h4>
+
+              <h3 class="statFonts">DEF</h3><h4 id="healerDef" class="statValFonts">131</h4>
+
+              <h3 class="statFonts">MDEF</h3><h4 id="healerMdef" class="statValFonts">282</h4>
+
+              <h3 class="statFonts">HP</h3><h4 id="healerHp" class="statValFonts">136</h4>
+
+              <h3 class="statFonts">MANA</h3><h4 id="healerMana" class="statValFonts">280</h4>
+              <p id="stats"></p>
+            </div>
+            <div class="statParts">
+              <h3 class="statFonts">STR</h3><h4 id="healerStr" class="statValFonts">20</h4>
+
+              <h3 class="statFonts">AGI</h3><h4 id="healerAgi" class="statValFonts">160</h4>
+
+              <h3 class="statFonts">INT</h3><h4 id="healerInt" class="statValFonts">280</h4>
+
+              <h3 class="statFonts">CRIT</h3><h4 id="healerCrit" class="statValFonts">112</h4>
+
+              <h3 class="statFonts">PRCS</h3><h4 id="healerPrcs" class="statValFonts">160</h4>
+
+              <h3 class="statFonts">RES</h3><h4 id="healerRes" class="statValFonts">184</h4>
+              <p id="stats"></p>
+            </div>
+
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="Char_Stat_Page.js"></script>
+  </body>
+
+
+</html>
